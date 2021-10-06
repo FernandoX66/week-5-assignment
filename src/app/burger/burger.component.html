@@ -1,0 +1,18 @@
+<div>
+  <div class="burger-container">
+    <div class="top-bread"></div>
+    <div *ngFor="let ingredient of burger.ingredients">
+      <div *ngIf="ingredient === 'tomato'" class="tomato"></div>
+    </div>
+    <div *ngFor="let ingredient of burger.ingredients">
+      <div *ngIf="ingredient === 'salad'" class="salad"></div>
+    </div>
+    <div *ngFor="let ingredient of burger.ingredients">
+      <div *ngIf="ingredient === 'cheese'" class="cheese"></div>
+    </div>
+    <div *ngFor="let ingredient of burger.ingredients">
+      <div *ngIf="ingredient === 'meat'" class="meat"></div>
+    </div>
+    <div class="bottom-bread"></div>
+  </div>
+</div>

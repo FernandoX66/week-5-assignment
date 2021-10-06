@@ -1,0 +1,83 @@
+.burger-container {
+  width: 75%;
+  max-width: 400px;
+  margin: 15px auto 0 auto;
+
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+
+  .top-bread {
+    background: linear-gradient(to bottom, #f3b97a, #ca8235);
+    height: 110px;
+
+    @media (min-width: 480px) {
+      height: 160px;
+    }
+
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 155px 155px 5px 5px;
+    margin-bottom: 15px;
+  }
+
+  .tomato {
+    background: linear-gradient(to top, #f03b3b, #db8f8f);
+    height: 12px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-bottom: 6px;
+  }
+
+  .salad {
+    background-color: #6bc770;
+    height: 8px;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-bottom: 6px;
+  }
+
+  .cheese {
+    background-color: #f3d633;
+    height: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-bottom: 6px;
+  }
+
+  .meat {
+    background-color: #8b643a;
+    background: linear-gradient(to top, #8b643a, #a38a6f);
+    height: 25px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+
+  .bottom-bread {
+    background: linear-gradient(to bottom, #f3b97a, #ca8235);
+    height: 20px;
+
+    @media (min-width: 480px) {
+      height: 30px;
+    }
+
+    width: 90%;
+    margin: 0 auto;
+    border: {
+      top: {
+        left-radius: 7px;
+        right-radius: 7px;
+      }
+      bottom: {
+        left-radius: 20px;
+        right-radius: 20px;
+      }
+    }
+    margin-top: 10px;
+  }
+}

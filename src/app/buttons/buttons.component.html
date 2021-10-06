@@ -1,0 +1,45 @@
+<div>
+  <div class="buttons-div">
+    <button (click)="addIngredient('tomato')" class="add-button">
+      Add Tomato
+    </button>
+    <button (click)="addIngredient('salad')" class="add-button">
+      Add Salad
+    </button>
+    <button (click)="addIngredient('cheese')" class="add-button">
+      Add Cheese
+    </button>
+    <button (click)="addIngredient('meat')" class="add-button">Add Meat</button>
+    <button
+      *ngIf="burger.ingredients.includes('tomato')"
+      (click)="removeIngredient('tomato')"
+      class="remove-button"
+    >
+      Remove Tomato
+    </button>
+    <button
+      *ngIf="burger.ingredients.includes('salad')"
+      (click)="removeIngredient('salad')"
+      class="remove-button"
+    >
+      Remove Salad
+    </button>
+    <button
+      *ngIf="burger.ingredients.includes('cheese')"
+      (click)="removeIngredient('cheese')"
+      class="remove-button"
+    >
+      Remove Cheese
+    </button>
+    <button
+      *ngIf="burger.ingredients.includes('meat')"
+      (click)="removeIngredient('meat')"
+      class="remove-button"
+    >
+      Remove Meat
+    </button>
+  </div>
+  <div class="save-button-div">
+    <button (click)="addBurger()">Save Burger</button>
+  </div>
+</div>

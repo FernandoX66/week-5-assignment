@@ -1,0 +1,11 @@
+.main-section {
+  @media (min-width: 990px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 15px;
+
+    app-history {
+      order: -1;
+    }
+  }
+}

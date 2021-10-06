@@ -1,0 +1,81 @@
+<div>
+  <div class="details-div">
+    <h2>Details:</h2>
+    <div class="details-table">
+      <div>
+        <div>
+          <p class="table-heading">Ingredient</p>
+        </div>
+        <div *ngIf="burger.tomatoAmount">
+          <p>Tomato</p>
+        </div>
+        <div *ngIf="burger.saladAmount">
+          <p>Salad</p>
+        </div>
+        <div *ngIf="burger.cheeseAmount">
+          <p>Cheese</p>
+        </div>
+        <div *ngIf="burger.meatAmount">
+          <p>Meat</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p class="table-heading">Units</p>
+        </div>
+        <div *ngIf="burger.tomatoAmount">
+          <p>
+            {{ burger.tomatoAmount }}
+          </p>
+        </div>
+        <div *ngIf="burger.saladAmount">
+          <p>
+            {{ burger.saladAmount }}
+          </p>
+        </div>
+        <div *ngIf="burger.cheeseAmount">
+          <p>
+            {{ burger.cheeseAmount }}
+          </p>
+        </div>
+        <div *ngIf="burger.meatAmount">
+          <p>
+            {{ burger.meatAmount }}
+          </p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p class="table-heading">Total</p>
+        </div>
+        <div *ngIf="burger.tomatoAmount">
+          <p>{{ burger.tomatoAmount * 0.35 | currency }}</p>
+        </div>
+        <div *ngIf="burger.saladAmount">
+          <p>{{ burger.saladAmount * 0.25 | currency }}</p>
+        </div>
+        <div *ngIf="burger.cheeseAmount">
+          <p>{{ burger.cheeseAmount * 0.5 | currency }}</p>
+        </div>
+        <div *ngIf="burger.meatAmount">
+          <p>{{ burger.meatAmount * 1.5 | currency }}</p>
+        </div>
+      </div>
+    </div>
+    <p>
+      Total:
+      <span *ngIf="currentCurrency === 'USD'">
+        {{ burger.totalAmount | currency: currentCurrency }}
+      </span>
+      <span *ngIf="currentCurrency === 'AUD'">
+        {{ burger.totalAmount * 1.37 | currency: currentCurrency }}
+      </span>
+      <span *ngIf="currentCurrency === 'MXN'">
+        {{ burger.totalAmount * 20.48 | currency: currentCurrency }}
+      </span>
+    </p>
+    <app-currency-bar
+      (onCurrencyChanged)="currencyChanged($event)"
+    ></app-currency-bar>
+  </div>
+</div>

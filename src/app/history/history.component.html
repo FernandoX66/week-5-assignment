@@ -1,0 +1,12 @@
+<div class="burgers-div">
+  <h3>Burgers history</h3>
+  <div class="burger-card" *ngFor="let burger of burgersHistory">
+    <p>
+      Burger <span> {{ burger.id }}</span> -
+      {{ burger.totalAmount | currency }}
+    </p>
+    <button [value]="burger.id" (click)="restoreBurger($event.target)">
+      Use
+    </button>
+  </div>
+</div>
